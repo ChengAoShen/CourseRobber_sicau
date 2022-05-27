@@ -5,7 +5,7 @@ from selenium.webdriver.edge.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 
-from apscheduler.schedulers.blocking import BlockingScheduler
+import time
 
 
 class Robber:
@@ -61,9 +61,9 @@ class Robber:
 
     def _robCourseByTime(self):
         """使用定时器进行抢课"""
-        sched = BlockingScheduler(timezone='Asia/Shanghai')
-        sched.add_job(self._justRobCourse, trigger='date', run_date=self.date)
-        sched.start()
+        while self.date.hour >=time.localtime().tm_hour and self.date.minute > time.localtime().tm_min:
+            ...
+        self._justRobCourse()
 
     def _justRobCourse(self):
         """进行普通的抢课"""
