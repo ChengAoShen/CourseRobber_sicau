@@ -1,9 +1,13 @@
+import PySide6
 from PySide6.QtWidgets import *
 from PySide6.QtCore import QFile
 from PySide6.QtUiTools import QUiLoader
 
+from datetime import time
+
 from Robber import Robber
 from qt_material import apply_stylesheet
+
 
 class Window:
     def __init__(self):
@@ -23,7 +27,12 @@ class Window:
         pwd = self.ui.Pwd.toPlainText()
         year = self.ui.year.currentText()
         classKey = self.ui.classKey.toPlainText()
-        rob(user, pwd, year, classKey)
+        if self.ui.checkBox.isChecked():
+            t = self.ui.date.time()
+            date = time(t.hour(), t.minute(), t.second())
+            rob(user, pwd, year, classKey, date)
+        else:
+            rob(user, pwd, year, classKey)
 
 
 def rob(User, Pwd, year, classKey, date=None):

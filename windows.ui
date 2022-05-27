@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>540</width>
-    <height>383</height>
+    <height>440</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -123,7 +123,7 @@ hr { height: 1px; border-width: 0; }
   <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>20</x>
      <y>200</y>
      <width>50</width>
      <height>20</height>
@@ -136,7 +136,7 @@ hr { height: 1px; border-width: 0; }
   <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
-     <x>270</x>
+     <x>280</x>
      <y>200</y>
      <width>50</width>
      <height>20</height>
@@ -160,7 +160,7 @@ hr { height: 1px; border-width: 0; }
    <property name="geometry">
     <rect>
      <x>200</x>
-     <y>300</y>
+     <y>370</y>
      <width>111</width>
      <height>24</height>
     </rect>
@@ -173,13 +173,36 @@ hr { height: 1px; border-width: 0; }
    <property name="geometry">
     <rect>
      <x>130</x>
-     <y>360</y>
+     <y>420</y>
      <width>281</width>
      <height>16</height>
     </rect>
    </property>
    <property name="text">
     <string>!!!本软件仅供学习交流使用，请勿用于其他用处!!!</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBox">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>260</y>
+     <width>91</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>定时抢课</string>
+   </property>
+  </widget>
+  <widget class="QTimeEdit" name="date">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>290</y>
+     <width>118</width>
+     <height>22</height>
+    </rect>
    </property>
   </widget>
  </widget>
