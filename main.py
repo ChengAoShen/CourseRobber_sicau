@@ -2,6 +2,7 @@ import PySide6
 from PySide6.QtWidgets import *
 from PySide6.QtCore import QFile
 from PySide6.QtUiTools import QUiLoader
+from PySide6.QtGui import QIcon
 
 from collections import namedtuple
 from Robber import Robber
@@ -13,7 +14,7 @@ class Window:
         super(Window, self).__init__()
 
         # 加载ui文件
-        qfile = QFile("./windows.ui")
+        qfile = QFile("static/windows.ui")
         qfile.open(QFile.ReadOnly)
         qfile.close()
 
@@ -46,7 +47,7 @@ class Window:
 
 if __name__ == '__main__':
     app = QApplication([])
-    # app.setWindowIcon(QIcon("logo.png"))    # 添加图标
+    app.setWindowIcon(QIcon("./static/cat.ico"))
     w = Window()
     QApplication.setStyle(QStyleFactory.create('Fusion'))
     apply_stylesheet(app, theme='dark_red.xml')
