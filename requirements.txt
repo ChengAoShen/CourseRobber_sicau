@@ -1,2 +1,4 @@
 selenium
 pyside6
+apscheduler
+qt-material
