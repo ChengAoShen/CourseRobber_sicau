@@ -5,12 +5,10 @@ block_cipher = None
 
 
 a = Analysis(
-    ['windows.py'],
+    ['main.py'],
     pathex=[],
     binaries=[],
-    datas=[
-        ('./windows.ui', '.'), 
-        ('Driver/msedgedriver.exe', 'Driver/msedgedriver.exe')],
+    datas=[],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
@@ -30,7 +28,7 @@ exe = EXE(
     a.zipfiles,
     a.datas,
     [],
-    name='windows',
+    name='main',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
