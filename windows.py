@@ -10,7 +10,7 @@ class Window:
         super(Window, self).__init__()
 
         # 加载ui文件
-        qfile = QFile("windows.ui")
+        qfile = QFile("./windows.ui")
         qfile.open(QFile.ReadOnly)
         qfile.close()
 
