@@ -7,9 +7,9 @@
 ## 使用方法📖
 ### 使用发行版本（推荐）✨
 从release处下载发布的最新版本，解压，文件夹如下
-![1.png](./docs/1.png)
+![1.png](./docs/file.png)
 双击main.exe打开，进入抢课界面
-<img src="./docs/2.png" alt="2.png" style="zoom:75%;" />
+<img src="./docs/window.png" alt="2.png" style="zoom:75%;" />
 
 **基础使用**：输入用户名密码，选择相应的学期与课程号，点击抢课即可
 
@@ -24,7 +24,7 @@
 1. 打开Eege并进入设置
 2. 点击关于Microsoft Edge
 3. 查看版本号
-![3.png](./docs/3.png)
+![3.png](./docs/edge.png)
 
 
 ### 使用源码🐍
