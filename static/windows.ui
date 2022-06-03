@@ -217,7 +217,7 @@ hr { height: 1px; border-width: 0; }
      <string>定时抢课</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="loginButton">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -230,17 +230,17 @@ hr { height: 1px; border-width: 0; }
      <string>仅登录</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_3">
+   <widget class="QCheckBox" name="EdgeWindows">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>240</y>
+      <y>270</y>
       <width>111</width>
       <height>20</height>
      </rect>
     </property>
     <property name="text">
-     <string>显示浏览器</string>
+     <string>不显示浏览器</string>
     </property>
    </widget>
   </widget>
@@ -250,25 +250,32 @@ hr { height: 1px; border-width: 0; }
      <x>10</x>
      <y>340</y>
      <width>711</width>
-     <height>191</height>
+     <height>221</height>
     </rect>
    </property>
    <property name="title">
     <string>输出面板</string>
    </property>
-  </widget>
-  <widget class="QLabel" name="label_6">
-   <property name="geometry">
-    <rect>
-     <x>230</x>
-     <y>550</y>
-     <width>281</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>!!!本软件仅供学习交流使用，请勿用于其他用处!!!</string>
-   </property>
+   <widget class="QTextBrowser" name="OutputText">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>691</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="html">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Microsoft YaHei UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;欢迎使用本抢课脚本，本脚本仅供学习交流使用，请勿用于牟利或其他用处。&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;若由于使用不当产生任何问题，由使用者本人承担。&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources/>

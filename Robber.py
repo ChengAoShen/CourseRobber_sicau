@@ -1,3 +1,5 @@
+from lib2to3.pgen2 import driver
+from re import T
 from selenium.webdriver import Edge
 from selenium.webdriver.edge.options import Options
 from selenium.webdriver.edge.service import Service
@@ -9,7 +11,7 @@ import time
 
 
 class Robber:
-    def __init__(self, User: str, Pwd: str, year: str, classKey, date=None):
+    def __init__(self, User: str, Pwd: str, year: str = None, classKey=None, date=None):
         """初始化
 
         Args:
@@ -47,6 +49,16 @@ class Robber:
         """加载开课目录"""
         self.browser.get(
             f"http://jiaowu.sicau.edu.cn/xuesheng/gongxuan/gongxuan/xszhinan.asp?title_id1=9&xueqi={self.year}")
+        flag=False
+        try:
+            alter=self.browser.switch_to.alert
+            alter.accept()
+            flag=True
+        except:
+            ...
+        if flag:
+            raise RuntimeError(alter.text)
+
         self.browser.find_element(
             By.XPATH, "/html/body/div/table[1]/tbody/tr/td[3]/a").click()
         self.browser.find_element(
@@ -61,7 +73,7 @@ class Robber:
 
     def _robCourseByTime(self):
         """使用定时器进行抢课"""
-        while self.date.hour >=time.localtime().tm_hour and self.date.minute > time.localtime().tm_min:
+        while self.date.hour >= time.localtime().tm_hour and self.date.minute > time.localtime().tm_min:
             ...
         self._justRobCourse()
 
@@ -88,3 +100,8 @@ class Robber:
             By.XPATH, '/html/body/div/center/table[3]/tbody/tr[2]/td[28]/a').click()
         alert = self.browser.switch_to.alert
         alert.accept()
+
+    def refresh_item(self,year,classKey,date=None):
+        self.year=year
+        self.classKey=classKey
+        self.date=date
