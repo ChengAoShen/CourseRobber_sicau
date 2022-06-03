@@ -73,6 +73,6 @@ if __name__ == '__main__':
     app.setWindowIcon(QIcon("./static/cat.ico"))
     w = Window()
     QApplication.setStyle(QStyleFactory.create('Fusion'))
-    apply_stylesheet(app, theme='dark_red.xml')
+    apply_stylesheet(app, theme='dark_yellow.xml')
     w.ui.show()
     app.exec()
